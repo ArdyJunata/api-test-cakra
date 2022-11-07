@@ -22,7 +22,7 @@ func NewCarRepo(db *gorm.DB) repositories.CarRepo {
 func (c *carRepo) GetGroupedBrandCars(ctx context.Context) (*[]models.Car, error) {
 	var cars []models.Car
 
-	res := c.db.Raw("SELECT brand from cars group by brand").Scan(&cars)
+	res := c.db.Find(&cars)
 	if res.Error != nil {
 		return nil, res.Error
 	}

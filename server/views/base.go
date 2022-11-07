@@ -44,11 +44,6 @@ func SuccessFindAllAPIResponse(payload interface{}, page, limit, total int) *API
 		Success: true,
 		Message: constants.SUCCESS_GET_DATA,
 		Payload: payload,
-		Query: &QueryResponse{
-			Page:  page,
-			Limit: limit,
-			Total: total,
-		},
 	}
 }
 

@@ -48,7 +48,7 @@ func (r *Router) carRouter() {
 
 func (r *Router) clubRouter() {
 	r.router.POST("/club", r.middleware.Tracer(r.baseController.Club.CreateClub))
-	r.router.GET("/club", r.middleware.Tracer(r.baseController.Club.GetAllClub))
+	r.router.GET("/club/leaguestandings", r.middleware.Tracer(r.baseController.Club.GetAllClub))
 	r.router.GET("/club/rank", r.middleware.Tracer(r.baseController.Club.ClubStandings))
 	r.router.POST("/club/recordgame", r.middleware.Tracer(r.baseController.Club.RecordGame))
 }
