@@ -36,7 +36,23 @@ Setelah itu aplikasi sudah dapat dijalankan dengan mengetikkan
 ```bash
 go run cmd/main.go
 ```
+## Sql Test
 
+### Query
+``` sql
+  SELECT * FROM crosstab(
+	$$ 
+        SELECT brand, type, CONCAT(type,':',price) as newPrice 
+        FROM cars ORDER BY 1,2 
+	$$
+  ) AS ct(brand varchar, Type1 text, Type2 text, Type3 text);
+```
+### Output :
+
+<center>
+<img src="https://drive.google.com/uc?export=view&id=1gza5ecDCmWwEzMjtSMwpdgmdffk5Z0ag" width="80%" alt="Laravel Logo">
+</center>
+<br>
 ## API Spec
 
 ## Cars
