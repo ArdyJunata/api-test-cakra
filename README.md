@@ -52,7 +52,7 @@ go run cmd/main.go
 <center>
 <img src="https://drive.google.com/uc?export=view&id=1gza5ecDCmWwEzMjtSMwpdgmdffk5Z0ag" width="80%" alt="Laravel Logo">
 </center>
-<br>
+
 ## API Spec
 
 ## Cars
